@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<head>
+</head>
+<body>
+<script>
+function enter(num){
+document.form.textView.value=document.form.textView.value+num;
+}
+function equal(){
+var exp = document.form.textView.value;
+if(exp){
+document.form.textView.value=eval(document.form.textView.value);
+}
+}
+function clear(){
+document.form.textView.value=" ";
+}
+</script>
+<center>
+<form name="form">
+<input type="text" name="textView"/><br>
+<input type="button" value="1" onclick="enter(1)"/>
+<input type="button" value="2" onclick="enter(2)"/>
+<input type="button" value="3" onclick="enter(3)"/>
+<input type="button" value="+" onclick="enter('+')"/>
+<br><br>
+<input type="button" value="4" onclick="enter(4)"/>
+<input type="button" value="5" onclick="enter(5)"/>
+<input type="button" value="6" onclick="enter(6)"/>
+<input type="button" value="-" onclick="enter('-')"/>
+<br><br>
+<input type="button" value="6" onclick="enter(6)"/>
+<input type="button" value="7" onclick="enter(7)"/>
+<input type="button" value="8" onclick="enter(8)"/>
+<input type="button" value="*" onclick="enter('*')"/>
+<br><br>
+<input type="button" value="0" onclick="enter(0)"/>
+<input type="button" value="%" onclick="enter('%')"/>
+<input type="button" value="=" onclick="equal()"/>
+<input type="button" value="C" onclick="clear()"/>
+<br>
+</form>
+</center>
+</body>
+</html>
